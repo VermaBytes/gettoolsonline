@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: { default: "GetTools.online – Free Online Tools", template: `%s | ${siteConfig.name}` },
   description: siteConfig.description,
   applicationName: siteConfig.name,
+  verification: { google: "eZbwHANI-HYBCeaBv0GHGVQF_PDaDwvyZvAgU8jEfXE" },
   keywords: ["free online tools", "image compressor", "word counter", "PDF tools", "online calculators", "SEO tools"],
   icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }, { url: "/favicon.png", sizes: "64x64", type: "image/png" }], apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }] },
   manifest: "/site.webmanifest",
