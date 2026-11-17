@@ -28,7 +28,7 @@ export function Footer() {
           </ul>
         </div>
       </div>
-      <div className="container footer-bottom">© {new Date().getFullYear()} {siteConfig.name}. Free browser-based tools for vermaxS everyday work. Salary and tax estimates are for planning only; confirm with official sources.</div>
+      <div className="container footer-bottom">© {new Date().getFullYear()} {siteConfig.name}. Free browser-based tools for everyday work. Salary and tax estimates are for planning only; confirm with official sources.</div>
     </footer>
   );
 }
