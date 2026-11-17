@@ -24,7 +24,7 @@ export function Footer() {
           <h4>Company</h4>
           <ul>
             <li><Link href="/about">About</Link></li><li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/privacy">Privacy</Link></li><li><Link href="/terms">Terms</Link></li>
+            <li><Link href="/privacy">Privacyss</Link></li><li><Link href="/terms">Terms</Link></li>
           </ul>
         </div>
       </div>
