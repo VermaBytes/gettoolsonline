@@ -24,6 +24,7 @@ export function Header() {
               {countries.map((c) => <Link key={c.code} href={`/salary-calculator/${c.slug}`}>{c.name}</Link>)}
             </div>
           </div>
+          <Link href="#">Blog</Link>
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
         </nav>
