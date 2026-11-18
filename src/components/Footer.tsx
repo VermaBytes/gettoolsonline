@@ -9,7 +9,7 @@ export function Footer() {
     <footer className="site-footer">
       <div className="container footer-grid">
         <div>
-          <Link className="footer-brand" href="/" aria-label={`${siteConfig.name} home`}><img className="footer-logo" src="/gettools-logo-footer.svg" alt="GetTools.online" width="280" height="66" /></Link>
+          <Link className="footer-brand" href="/" aria-label={`${siteConfig.name} home`}><img className="footer-logo" src="/toolix-logo.png" alt="Toolix — Smart tools. Simpler work." width="1521" height="465" /></Link>
           <p className="footer-muted">{siteConfig.tagline}. Estimates for planning only, not tax advice.</p>
         </div>
         <div>
@@ -24,7 +24,7 @@ export function Footer() {
           <h4>Company</h4>
           <ul>
             <li><Link href="/about">About</Link></li><li><Link href="/contact">Contact</Link></li>
-            <li><Link href="/privacy">PrivacyiesS</Link></li><li><Link href="/terms">Terms</Link></li>
+            <li><Link href="/privacy">Privacy</Link></li><li><Link href="/terms">Terms</Link></li>
           </ul>
         </div>
       </div>

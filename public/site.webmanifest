@@ -1,6 +1,6 @@
 {
-  "name": "GetTools.online",
-  "short_name": "GetTools",
+  "name": "Toolix",
+  "short_name": "Toolix",
   "description": "Simple Tools. Smarter Work.",
   "start_url": "/",
   "display": "standalone",

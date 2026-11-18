@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-export const metadata: Metadata = { title: "Privacy Policy", description: "How GetTools.online handles your data when you use browser-based online tools and calculators.", alternates: { canonical: "/privacy" } };
+export const metadata: Metadata = { title: "Privacy Policy", description: "How Toolix handles your data when you use browser-based online tools and calculators.", alternates: { canonical: "/privacy" } };
 
 export default function Privacy() {
   return (

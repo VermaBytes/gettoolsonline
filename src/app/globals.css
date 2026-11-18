@@ -154,7 +154,7 @@ button,input,select{font:inherit}
 .chip-row a .flag{box-shadow:0 0 0 1px #d0d5dd}
 .title-flag{display:flex;align-items:center;gap:12px}
 
-/* GetTools.online additions — retains the original navy and blue palette */
+/* Toolix additions — retains the original navy and blue palette */
 .brand-name{font-family:Manrope,sans-serif;font-size:22px;font-weight:800;letter-spacing:-.8px;color:var(--navy);white-space:nowrap}
 .brand-name span{color:var(--blue)}
 .hero-eyebrow{display:inline-block;margin-bottom:8px;padding:4px 10px;border:1px solid #ffffff35;border-radius:999px;color:#d8e3fb;font-size:10px;font-weight:800;letter-spacing:1.2px}

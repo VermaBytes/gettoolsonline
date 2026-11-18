@@ -1,8 +1,8 @@
 export const siteConfig = {
-  name: "GetTools.online",
+  name: "Toolix",
   tagline: "Free online tools for work, study and everyday tasks",
   description: "Free online image, PDF, text, calculator, SEO, salary and tax tools. Fast, simple browser-based utilities for everyday tasks.",
-  url: "https://gettools.online",
+  url: "https://www.gettoolix.online",
   email: "" // set your real support email here; the Contact page shows it automatically
 };
 

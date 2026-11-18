@@ -6,7 +6,7 @@ import { countries } from "@/lib/countries";
 import { Flag } from "@/components/Flag";
 import { siteConfig } from "@/lib/site";
 
-export const metadata: Metadata = { title: "All Free Online Tools", description: "Browse free image, PDF, text, calculator, SEO, salary and tax tools on GetTools.online.", alternates: { canonical: `${siteConfig.url}/tools` } };
+export const metadata: Metadata = { title: "All Free Online Tools", description: "Browse free image, PDF, text, calculator, SEO, salary and tax tools on Toolix.", alternates: { canonical: `${siteConfig.url}/tools` } };
 
 export default function AllToolsPage() {
   return <main className="page"><div className="container"><nav className="breadcrumbs"><Link href="/">Home</Link> / <span>All tools</span></nav><h1 className="page-title">Explore all free online tools</h1><p className="page-lede">Useful tools for images, documents, text, calculations, SEO and salary planning—all in one place.</p>

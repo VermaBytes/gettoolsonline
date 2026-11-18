@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { siteConfig } from "@/lib/site";
-export const metadata: Metadata = { title: "Contact GetTools.online", description: "Contact GetTools.online to report a tool issue, suggest a feature or flag a salary calculator error.", alternates: { canonical: "/contact" } };
+export const metadata: Metadata = { title: "Contact Toolix", description: "Contact Toolix to report a tool issue, suggest a feature or flag a salary calculator error.", alternates: { canonical: "/contact" } };
 
 export default function Contact() {
   return (

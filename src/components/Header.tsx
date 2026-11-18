@@ -8,7 +8,7 @@ export function Header() {
     <header className="site-header">
       <div className="container nav">
         <Link className="brand" href="/" aria-label={`${siteConfig.name} home`}>
-          <img className="brand-logo" src="/gettools-logo.svg" alt="GetTools.online — Simple Tools. Smarter Work." width="280" height="66" />
+          <img className="brand-logo" src="/toolix-logo.png" alt="Toolix — Smart tools. Simpler work." width="1521" height="465" />
         </Link>
         <nav className="nav-links" aria-label="Main navigation">
           <Link href="/tools">All tools</Link>

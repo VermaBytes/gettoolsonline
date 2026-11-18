@@ -9,16 +9,16 @@ import { JsonLd } from "@/components/JsonLd";
 import { Flag } from "@/components/Flag";
 
 export const metadata: Metadata = {
-  title: { absolute: "GetTools.online – Free Online Tools for Everyday Work" },
+  title: { absolute: "Toolix – Free Online Tools for Everyday Work" },
   description: siteConfig.description,
   alternates: { canonical: siteConfig.url }
 };
 
 const faqs = [
-  { q: "Are the tools on GetTools.online free?", a: "Yes. The tools are free to use. Some tools may be marked as coming soon while they are being developed." },
+  { q: "Are the tools on Toolix free?", a: "Yes. The tools are free to use. Some tools may be marked as coming soon while they are being developed." },
   { q: "Do I need to install software?", a: "No. Available tools run in your web browser, so you can use them without installing a desktop application." },
   { q: "Are my files uploaded?", a: "Image and text tools that support local processing work directly in your browser. Your selected files are not uploaded by those tools." },
-  { q: "Which salary calculators are available?", a: "GetTools.online includes salary and tax calculators for India, the United States, the United Kingdom, Canada, Australia, Singapore, the UAE and Ireland." }
+  { q: "Which salary calculators are available?", a: "Toolix includes salary and tax calculators for India, the United States, the United Kingdom, Canada, Australia, Singapore, the UAE and Ireland." }
 ];
 
 export default function Home() {
