@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-// @ts-expect-error Next.js handles CSS imports at build time.
 import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Header } from "@/components/Header";
