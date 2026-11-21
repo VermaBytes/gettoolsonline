@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import type { OnlineTool } from "@/lib/online-tools";
+import { ComingSoonTool } from "@/components/ComingSoonTool";
 
 type Props = { tool: OnlineTool };
 
@@ -82,7 +83,7 @@ export function OnlineToolWorkspace({ tool }: Props) {
   const metaOutput = `<!-- Primary Meta Tags -->\n<title>${pageTitle}</title>\n<meta name="description" content="${pageDescription}" />\n<link rel="canonical" href="${pageUrl}" />\n\n<!-- Open Graph -->\n<meta property="og:type" content="website" />\n<meta property="og:title" content="${pageTitle}" />\n<meta property="og:description" content="${pageDescription}" />\n<meta property="og:url" content="${pageUrl}" />\n\n<!-- Twitter -->\n<meta name="twitter:card" content="summary_large_image" />\n<meta name="twitter:title" content="${pageTitle}" />\n<meta name="twitter:description" content="${pageDescription}" />`;
   const robotsOutput = `${allowAll ? "User-agent: *\nAllow: /" : "User-agent: *\nDisallow: /"}${sitemap.trim() ? `\n\nSitemap: ${sitemap.trim()}` : ""}\n`;
 
-  if (tool.status === "coming") return <div className="tool-workspace"><div className="coming-panel"><span className="coming-icon">✦</span><h2>This tool is coming soon</h2><p>We’re preparing this utility. You can explore the other available tools in the meantime.</p><span className="status-pill">In development</span></div></div>;
+  if (tool.status === "coming") return <ComingSoonTool slug={tool.slug} name={tool.name} short={tool.short} />;
 
   return <div className="tool-workspace">
     <div className="workspace-head"><div><span className="workspace-kicker">FREE ONLINE TOOL</span><h2>{tool.name}</h2><p>Simple, fast and private. Your inputs are processed in your browser.</p></div><span className="status-pill ready">Free to use</span></div>

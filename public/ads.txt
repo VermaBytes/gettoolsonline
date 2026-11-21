@@ -1,0 +1,2 @@
+# AdSense is not enabled yet. After receiving a publisher ID, add the seller record:
+# google.com, pub-REPLACE_WITH_YOUR_PUBLISHER_ID, DIRECT, f08c47fec0942fa0

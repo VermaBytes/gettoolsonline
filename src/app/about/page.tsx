@@ -7,13 +7,13 @@ export default function About() {
     <main className="page"><div className="container narrow">
       <h1 className="page-title">About Toolix</h1>
       <article className="content-block">
-        <p>Toolix brings practical free online tools together in one place. Use image, text, calculator, SEO and salary utilities without installing desktop software. Tools that support local processing work directly in your browser.</p>
-        <h2>How our tools work</h2>
-        <p>Salary calculators use published rates for the selected tax year: Indian FY 2026-27 slabs, the 2026 IRS brackets and FICA wage base, UK 2026/27 income tax and National Insurance, 2026 Canadian federal and provincial rates, Australian 2026-27 resident rates, Singapore YA 2026 and CPF ceilings, and Irish 2026 PAYE, USC and PRSI.</p>
-        <h2>What is not included</h2>
-        <p>Results assume a standard employee. Individual tax credits, benefits in kind, student loans, local taxes and employer-specific deductions are not modelled, so your payslip can differ. Always confirm important decisions with your tax authority or a qualified adviser.</p>
-        <h2>Keeping rates current</h2>
-        <p>Tax rules change every year. We review each country when budgets or tax-year changes are announced and update the figures and page content together. See a rate or tool result that looks out of date? <Link href="/contact">Tell us</Link>.</p>
+        <p>Toolix is a collection of free browser-based tools for everyday work, study and personal planning. The site brings image utilities, text helpers, simple calculators, SEO generators and salary and tax calculators together so visitors can complete common tasks without installing desktop software.</p>
+        <h2>What you can do here</h2>
+        <p>Use image tools to resize, compress and convert supported formats. Text tools can count words, change letter case or remove duplicate lines. Everyday calculators help with percentages, discounts and age. SEO utilities create starter meta tags and robots.txt rules. Salary and workplace calculators provide estimates for take-home pay, tax comparisons, retirement contributions, gratuity and pay changes across several countries.</p>
+        <h2>How the tools handle your information</h2>
+        <p>Tools that accept text or files are designed to process those inputs in your browser. The site does not ask you to upload calculator inputs through a form. Avoid entering sensitive information into any website, and review each result before relying on it. Salary, tax and benefits results are estimates based on the assumptions shown on each calculator page; they are not professional advice.</p>
+        <h2>Who makes Toolix</h2>
+        <p>Toolix is built and maintained by <strong>[APNA NAAM/TEAM]</strong>. We aim to make useful tools clear, accessible and straightforward to use. If you find an error, have a suggestion or want to request a tool, <Link href="/contact">contact us</Link>.</p>
       </article>
     </div></main>
   );

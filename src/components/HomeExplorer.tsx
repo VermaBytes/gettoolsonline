@@ -9,7 +9,7 @@ type Item = { href: string; title: string; text: string; tag: string };
 export function HomeExplorer() {
   const [q, setQ] = useState("");
   const items: Item[] = useMemo(() => [
-    ...onlineTools.map((t) => ({ href: `/utilities/${t.slug}`, title: t.name, text: t.short, tag: t.category })),
+    ...onlineTools.filter((t) => t.status === "ready").map((t) => ({ href: `/utilities/${t.slug}`, title: t.name, text: t.short, tag: t.category })),
     ...countries.map((c) => ({ href: `/salary-calculator/${c.slug}`, title: `${c.name} salary calculator`, text: `${c.taxYear} · take-home pay after tax`, tag: c.region })),
     ...tools.map((t) => ({ href: `/tools/${t.slug}`, title: t.name, text: t.short, tag: "Salary & Tax Tools" }))
   ], []);

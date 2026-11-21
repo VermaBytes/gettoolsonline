@@ -7,8 +7,8 @@ export default function Contact() {
     <main className="page"><div className="container narrow">
       <h1 className="page-title">Contact</h1>
       <article className="content-block">
-        <p>Found a rate that looks out of date, or want a country or calculator added? We read every message.</p>
-        {siteConfig.email ? <p>Email us at <a href={`mailto:${siteConfig.email}`}>{siteConfig.email}</a>.</p> : <p>Our contact email will be published here shortly.</p>}
+        <p>Contact the Toolix team to report a tool issue, suggest a feature or flag a salary calculator result that needs review.</p>
+        <p>Email: <strong>{siteConfig.email}</strong></p>
       </article>
     </div></main>
   );

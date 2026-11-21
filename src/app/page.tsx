@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { countries, calculate, money, pct } from "@/lib/countries";
 import { tools as salaryTools, siteConfig } from "@/lib/site";
-import { onlineTools, onlineCategories } from "@/lib/online-tools";
+import { onlineTools, publicOnlineCategories } from "@/lib/online-tools";
 import { HomeExplorer } from "@/components/HomeExplorer";
 import { Faq, faqSchema } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
 };
 
 const faqs = [
-  { q: "Are the tools on Toolix free?", a: "Yes. The tools are free to use. Some tools may be marked as coming soon while they are being developed." },
+  { q: "Are the tools on Toolix free?", a: "Yes. The available tools are free to use." },
   { q: "Do I need to install software?", a: "No. Available tools run in your web browser, so you can use them without installing a desktop application." },
   { q: "Are my files uploaded?", a: "Image and text tools that support local processing work directly in your browser. Your selected files are not uploaded by those tools." },
   { q: "Which salary calculators are available?", a: "Toolix includes salary and tax calculators for India, the United States, the United Kingdom, Canada, Australia, Singapore, the UAE and Ireland." }
@@ -35,7 +35,7 @@ export default function Home() {
     </div></section>
 
     <section className="section" id="categories"><div className="container"><div className="section-topline"><div><h2 className="section-title">Browse tool categories</h2><p className="section-sub">Find the right utility for the task at hand.</p></div><Link className="section-link" href="/tools">View all tools →</Link></div>
-      <div className="category-grid">{onlineCategories.map((c) => <Link key={c.slug} href={c.slug === "salary-tax-tools" ? "/#salary-tools" : `/tools#${c.slug}`} className="category-card"><span className="category-symbol">{c.icon}</span><h3>{c.name}</h3><p>{c.description}</p><span className="more">Explore category →</span></Link>)}</div>
+      <div className="category-grid">{publicOnlineCategories.map((c) => <Link key={c.slug} href={c.slug === "salary-tax-tools" ? "/#salary-tools" : `/tools#${c.slug}`} className="category-card"><span className="category-symbol">{c.icon}</span><h3>{c.name}</h3><p>{c.description}</p><span className="more">Explore category →</span></Link>)}</div>
     </div></section>
 
     <section className="section alt" id="popular-tools"><div className="container"><div className="section-topline"><div><h2 className="section-title">Popular free tools</h2><p className="section-sub">Quick, practical utilities for everyday tasks.</p></div><Link className="section-link" href="/tools">Explore all tools →</Link></div>
@@ -49,5 +49,16 @@ export default function Home() {
     <section className="section alt" id="countries"><div className="container"><h2 className="section-title">Salary calculators by country</h2><p className="section-sub">Pick your country for yearly, monthly, weekly and hourly take-home pay.</p><div className="card-grid">{countries.map((c) => { const r = calculate(c.code, c.defaultSalary); return <Link key={c.code} href={`/salary-calculator/${c.slug}`} className="card"><Flag code={c.code}/><span className="tag">{c.region}</span><h3>{c.name}</h3><p>{money(c.defaultSalary, c)} gross → <b>{money(r.net / 12, c)}</b> per month ({pct(r.effectiveRate)} avg. tax)</p><span className="more">Open calculator →</span></Link>; })}</div></div></section>
 
     <section className="section"><div className="container"><Faq items={faqs}/></div></section>
+
+    <section className="founder-section" aria-label="About the founder">
+      <div className="container"><div className="founder-note">
+        <h2>From the Founder</h2>
+        <div className="founder-note-copy">
+          <p>Toolix brings practical browser-based utilities and calculators together to make everyday digital tasks simpler. From working with images and text to exploring salary estimates, the goal is to help you get useful work done with clear, easy-to-use tools.</p>
+          <p>Built with care in Lakhimpur Kheri, Toolix is continually growing around what people need: straightforward experiences, helpful guidance, and transparent calculator estimates.</p>
+          <p className="founder-note-byline"><strong>Shobhit Verma</strong><span>Lakhimpur Kheri, Uttar Pradesh, India</span></p>
+        </div>
+      </div></div>
+    </section>
   </main>;
 }

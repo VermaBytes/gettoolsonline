@@ -26,10 +26,8 @@ export function progressive(income: number, brackets: Bracket[]): number {
 }
 
 export function marginalOf(income: number, brackets: Bracket[]): number {
-  let prev = 0;
   for (const b of brackets) {
     if (income < b.upTo) return b.rate;
-    prev = b.upTo;
   }
   return brackets[brackets.length - 1].rate;
 }

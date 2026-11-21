@@ -9,6 +9,8 @@ import { RelatedLinks } from "@/components/RelatedLinks";
 import { Faq, faqSchema, crumbSchema } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { Flag } from "@/components/Flag";
+import { taxSourceNotes } from "@/lib/tax-source-notes";
+import { INDEX_SALARY_AFTER_TAX_PAGES } from "@/lib/seo-flags";
 
 export function generateStaticParams() {
   return countries.flatMap((c) => c.salarySteps.map((s) => ({ country: c.slug, amount: String(s) })));
@@ -34,7 +36,7 @@ export async function generateMetadata({ params }: { params: Promise<{ country: 
   const url = `${siteConfig.url}/salary-after-tax/${c.slug}/${n}`;
   const title = `${label(c, n)} Salary After Tax in ${c.name} (${shortYear(c)}) – ${money(r.net / 12, c)}/Month`;
   const description = `A ${label(c, n)} salary in ${c.name} leaves ${money(r.net, c)} a year (${money(r.net / 12, c)} per month) after tax and deductions — an average tax rate of ${pct(r.effectiveRate)}. See the full breakdown.`;
-  return { title, description, alternates: { canonical: url }, openGraph: { type: "article", url, title, description, siteName: siteConfig.name }, keywords: [`${label(c, n)} salary after tax ${c.name}`, `${label(c, n)} take home pay`, `${label(c, n)} in hand salary`, ...c.keywords.slice(0, 3)] };
+  return { title, description, alternates: { canonical: url }, robots: { index: INDEX_SALARY_AFTER_TAX_PAGES, follow: true }, openGraph: { type: "article", url, title, description, siteName: siteConfig.name }, keywords: [`${label(c, n)} salary after tax ${c.name}`, `${label(c, n)} take home pay`, `${label(c, n)} in hand salary`, ...c.keywords.slice(0, 3)] };
 }
 
 export default async function AmountPage({ params }: { params: Promise<{ country: string; amount: string }> }) {
@@ -43,6 +45,7 @@ export default async function AmountPage({ params }: { params: Promise<{ country
   const n = Number(amount);
   if (!c || !c.salarySteps.includes(n)) notFound();
   const r = calculate(c.code, n);
+  const sourceNote = taxSourceNotes[c.code];
   const url = `${siteConfig.url}/salary-after-tax/${c.slug}/${n}`;
   const L = label(c, n);
   const faqs = [
@@ -81,6 +84,7 @@ export default async function AmountPage({ params }: { params: Promise<{ country
         <section className="content-block"><h2>Compare other salaries in {c.name}</h2><SalaryTable c={c} current={n} /></section>
         <Faq items={faqs} />
         <RelatedLinks code={c.code} />
+        <p className="note"><strong>Official source:</strong> {sourceNote.officialSource}<br/><strong>Data checked:</strong> {sourceNote.dataChecked}</p>
         <p className="disclaimer">Estimate for a standard employee. Not tax advice. <Link href={`/salary-calculator/${c.slug}`}>Open the full {c.name} salary calculator</Link>.</p>
       </div>
     </main>

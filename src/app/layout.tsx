@@ -3,6 +3,8 @@ import "./globals.css";
 import { siteConfig } from "@/lib/site";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { ConsentManager } from "@/components/ConsentManager";
+import { YoutubeSubscribePrompt } from "@/components/YoutubeSubscribePrompt";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -23,7 +25,7 @@ export const viewport: Viewport = { width: "device-width", initialScale: 1, them
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
-      <body><Header />{children}<Footer /></body>
+      <body><Header />{children}<Footer /><ConsentManager /><YoutubeSubscribePrompt /></body>
     </html>
   );
 }
